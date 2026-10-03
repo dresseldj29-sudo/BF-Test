@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feuerwehr Bewerbungstrainer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        <div class="brand-icon">🚒</div>
+
+        <div>
+            <strong>FEUERWEHR</strong>
+            <small>BEWERBUNGSTRAINER</small>
+        </div>
+    </div>
+
+    <div class="top-right">
+        <span class="status">TRAINING</span>
+
+        <button id="resetButton">
+            Fortschritt zurücksetzen
+        </button>
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================
+     STARTSEITE
+========================= -->
+
+<section id="startScreen" class="screen active">
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <span class="eyebrow">
+                DIGITALER FEUERWEHR-AUSWAHLTRAINER
+            </span>
+
+            <h1>
+                Bereit für deinen
+                <span>Einstellungstest?</span>
+            </h1>
+
+            <p>
+                Wähle deine Berufsfeuerwehr und trainiere
+                Schritt für Schritt für dein Auswahlverfahren.
+            </p>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-icon">
+                🧯
+            </div>
+
+            <h3>
+                Realistische Simulation
+            </h3>
+
+            <p>
+                Lernmodule, Übungsfragen, Zeitdruck,
+                Prüfungssimulation und automatische Auswertung.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <h2>
+        1. Berufsfeuerwehr auswählen
+    </h2>
+
+
+    <div id="cityGrid" class="city-grid"></div>
+
+
+    <div class="profile-box">
+
+        <div>
+            <h3>
+                Dein Lernprofil
+            </h3>
+
+            <p>
+                Dein Name ist optional und wird nur
+                auf deinem Gerät gespeichert.
+            </p>
+        </div>
+
+
+        <input
+            id="nameInput"
+            type="text"
+            placeholder="Dein Name"
+        >
+
+
+        <button
+            id="startButton"
+            class="primary"
+        >
+            Training starten →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<section id="dashboardScreen" class="screen">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="eyebrow">
+                AUSBILDUNGSZENTRUM
+            </span>
+
+            <h1 id="dashboardTitle">
+                Berufsfeuerwehr
+            </h1>
+
+            <p id="dashboardDescription"></p>
+
+        </div>
+
+
+        <button
+            id="changeCityButton"
+            class="secondary"
+        >
+            Feuerwehr ändern
+        </button>
+
+    </div>
+
+
+
+    <div class="statistics">
+
+        <div class="stat">
+            <strong id="statTests">0</strong>
+            <span>Prüfungen</span>
+        </div>
+
+        <div class="stat">
+            <strong id="statBest">–</strong>
+            <span>Beste Punktzahl</span>
+        </div>
+
+        <div class="stat">
+            <strong id="statProgress">0%</strong>
+            <span>Lernfortschritt</span>
+        </div>
+
+        <div class="stat">
+            <strong id="statLast">–</strong>
+            <span>Letztes Ergebnis</span>
+        </div>
+
+    </div>
+
+
+
+    <div class="dashboard-grid">
+
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <h2>
+                    Lernmodule
+                </h2>
+
+                <span>
+                    Schritt für Schritt
+                </span>
+
+            </div>
+
+
+            <div
+                id="moduleList"
+                class="module-list"
+            ></div>
+
+        </div>
+
+
+
+        <div class="panel exam-panel">
+
+            <span class="exam-label">
+                PRÜFUNGSSIMULATION
+            </span>
+
+            <h2>
+                Prüfung unter Zeitdruck
+            </h2>
+
+            <p>
+                Eine komplette Simulation mit
+                gemischten Aufgaben und automatischer
+                Auswertung.
+            </p>
+
+
+            <ul>
+
+                <li>⏱ Zeitlimit</li>
+
+                <li>📝 Verschiedene Themen</li>
+
+                <li>🎯 Punktewertung</li>
+
+                <li>🏆 Bestanden / nicht bestanden</li>
+
+            </ul>
+
+
+            <button
+                id="examButton"
+                class="primary wide"
+            >
+                Komplette Prüfung starten
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="information">
+
+        <strong>
+            Hinweis:
+        </strong>
+
+        Diese Webseite verwendet selbst erstellte
+        Trainingsaufgaben auf Grundlage öffentlich
+        beschriebener Auswahlverfahren. Es handelt sich
+        nicht um vertrauliche oder geleakte Originalprüfungen.
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LERNBEREICH
+========================= -->
+
+<section id="learningScreen" class="screen">
+
+    <div class="page-header">
+
+        <div>
+
+            <span class="eyebrow">
+                LERNMODUL
+            </span>
+
+            <h1 id="learningTitle"></h1>
+
+            <p id="learningDescription"></p>
+
+        </div>
+
+
+        <button
+            id="backButton"
+            class="secondary"
+        >
+            ← Übersicht
+        </button>
+
+    </div>
+
+
+    <div class="learning-layout">
+
+
+        <aside
+            id="lessonNavigation"
+            class="lesson-navigation"
+        ></aside>
+
+
+        <article class="lesson-content">
+
+            <div id="lessonText"></div>
+
+
+            <button
+                id="lessonTestButton"
+                class="primary"
+            >
+                Modul testen →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRÜFUNG
+========================= -->
+
+<section id="quizScreen" class="screen">
+
+
+    <div class="quiz-header">
+
+        <div>
+
+            <span
+                id="quizMode"
+                class="eyebrow"
+            >
+                TRAINING
+            </span>
+
+            <h1 id="quizTitle"></h1>
+
+        </div>
+
+
+        <div
+            id="timer"
+            class="timer"
+        >
+            00:00
+        </div>
+
+    </div>
+
+
+
+    <div class="progress">
+
+        <div id="progressBar"></div>
+
+    </div>
+
+
+    <div class="question-info">
+
+        <span id="questionNumber"></span>
+
+        <span id="questionCategory"></span>
+
+    </div>
+
+
+
+    <div class="question-card">
+
+        <h2 id="question"></h2>
+
+
+        <div
+            id="answers"
+            class="answers"
+        ></div>
+
+
+        <div
+            id="feedback"
+            class="feedback hidden"
+        ></div>
+
+    </div>
+
+
+
+    <div class="quiz-buttons">
+
+        <button
+            id="cancelQuiz"
+            class="secondary"
+        >
+            Test abbrechen
+        </button>
+
+
+        <button
+            id="nextQuestion"
+            class="primary"
+        >
+            Nächste Aufgabe →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ERGEBNIS
+========================= -->
+
+<section id="resultScreen" class="screen">
+
+    <div class="result-card">
+
+        <div
+            id="resultIcon"
+            class="result-icon"
+        >
+            🏆
+        </div>
+
+
+        <span class="eyebrow">
+            AUSWERTUNG
+        </span>
+
+
+        <h1 id="resultTitle"></h1>
+
+
+        <p id="resultDescription"></p>
+
+
+        <div class="result-score">
+
+            <strong id="resultPercent">
+                0%
+            </strong>
+
+            <span id="resultPoints"></span>
+
+        </div>
+
+
+        <div
+            id="resultDetails"
+            class="result-details"
+        ></div>
+
+
+        <div class="result-buttons">
+
+            <button
+                id="retryButton"
+                class="primary"
+            >
+                Noch einmal
+            </button>
+
+
+            <button
+                id="resultDashboard"
+                class="secondary"
+            >
+                Zur Übersicht
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        🚒 Feuerwehr Bewerbungstrainer
+    </span>
+
+    <span>
+        Trainingssimulation
+    </span>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
