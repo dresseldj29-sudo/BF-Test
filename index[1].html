@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Feuerwehr Bewerbungstrainer – realistische Prüfungssimulation für Berufsfeuerwehren">
+  <title>Feuerwehr Bewerbungstrainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">🚒</span><div><b>FEUERWEHR</b><small>BEWERBUNGSTRAINER</small></div></div>
+    <div class="top-actions">
+      <span id="statusBadge" class="badge">TRAINING</span>
+      <button id="resetBtn" class="ghost-btn">Fortschritt zurücksetzen</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="startScreen" class="screen active">
+      <div class="hero">
+        <div>
+          <span class="eyebrow">DEIN DIGITALER AUSWAHLTRAINER</span>
+          <h1>Bereit für den<br><span>Einstellungstest?</span></h1>
+          <p>Wähle deine Berufsfeuerwehr und trainiere Schritt für Schritt: Lernstoff, Fragen, Zeitdruck, Prüfungssimulation und Ergebnis.</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-icon">🧯</div>
+          <b>Realistische Simulation</b>
+          <span>Keine echten oder vertraulichen Prüfungsunterlagen – sondern eigene Aufgaben nach öffentlich beschriebenen Anforderungen.</span>
+        </div>
+      </div>
+
+      <h2>1. Berufsfeuerwehr auswählen</h2>
+      <div id="cityGrid" class="city-grid"></div>
+
+      <div class="profile-box">
+        <div>
+          <h3>Dein Lernprofil</h3>
+          <p>Die Angaben bleiben in deinem Browser gespeichert.</p>
+        </div>
+        <input id="nameInput" type="text" maxlength="40" placeholder="Dein Name (optional)">
+        <button id="continueBtn" class="primary-btn">Training starten →</button>
+      </div>
+    </section>
+
+    <section id="dashboardScreen" class="screen">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">AUSBILDUNGSZENTRUM</span>
+          <h1 id="dashboardTitle">Berufsfeuerwehr</h1>
+          <p id="dashboardSubtitle"></p>
+        </div>
+        <button id="changeCityBtn" class="ghost-btn">Feuerwehr ändern</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b id="statTests">0</b><span>Prüfungen</span></div>
+        <div class="stat"><b id="statBest">–</b><span>Beste Punktzahl</span></div>
+        <div class="stat"><b id="statProgress">0%</b><span>Lernfortschritt</span></div>
+        <div class="stat"><b id="statPass">–</b><span>Letztes Ergebnis</span></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="panel">
+          <div class="panel-title"><h2>Lernmodule</h2><span>Schritt für Schritt</span></div>
+          <div id="moduleList" class="module-list"></div>
+        </div>
+        <div class="panel exam-panel">
+          <div class="exam-ribbon">PRÜFUNGSSIMULATION</div>
+          <h2>Jetzt unter Prüfungsbedingungen testen</h2>
+          <p>Gemischte Aufgaben, Zeitlimit, keine Lösungen während des Tests und automatische Auswertung.</p>
+          <ul>
+            <li>⏱ Zeitlimit</li>
+            <li>🎯 Gemischte Themen</li>
+            <li>📝 Punkte pro Aufgabe</li>
+            <li>📊 Bestehen / nicht bestehen</li>
+          </ul>
+          <button id="startExamBtn" class="primary-btn wide">Komplette Prüfung starten</button>
+        </div>
+      </div>
+
+      <div class="info-note">
+        <b>Hinweis zur Realität:</b> Die Seite simuliert den veröffentlichten Aufbau und trainiert passende Kompetenzen. Ein echtes Auswahlverfahren kann sich ändern. Vor einer Bewerbung immer die aktuelle Ausschreibung der jeweiligen Stadt prüfen.
+      </div>
+    </section>
+
+    <section id="learnScreen" class="screen">
+      <div class="page-head">
+        <div><span class="eyebrow">LERNMODUL</span><h1 id="learnTitle"></h1><p id="learnDescription"></p></div>
+        <button id="backDashboard1" class="ghost-btn">← Übersicht</button>
+      </div>
+      <div class="lesson-layout">
+        <aside id="lessonNav" class="lesson-nav"></aside>
+        <article class="lesson-content">
+          <div id="lessonBody"></div>
+          <div class="lesson-actions">
+            <button id="lessonQuizBtn" class="primary-btn">Modul testen →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen">
+      <div class="quiz-head">
+        <div><span id="quizMode" class="eyebrow">TRAINING</span><h1 id="quizTitle"></h1></div>
+        <div class="timer" id="timer">00:00</div>
+      </div>
+      <div class="progressbar"><div id="quizProgress"></div></div>
+      <div class="question-meta"><span id="questionCount"></span><span id="questionCategory"></span></div>
+      <div class="question-card">
+        <h2 id="questionText"></h2>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback hidden"></div>
+      </div>
+      <div class="quiz-actions">
+        <button id="quitQuizBtn" class="ghost-btn">Test abbrechen</button>
+        <button id="nextBtn" class="primary-btn">Nächste Aufgabe →</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <div id="resultIcon" class="result-icon">🏁</div>
+        <span class="eyebrow">AUSWERTUNG</span>
+        <h1 id="resultTitle"></h1>
+        <p id="resultSubtitle"></p>
+        <div class="result-score"><b id="resultPercent"></b><span id="resultPoints"></span></div>
+        <div id="resultDetails" class="result-details"></div>
+        <div class="result-actions">
+          <button id="retryBtn" class="primary-btn">Noch einmal</button>
+          <button id="resultDashboardBtn" class="ghost-btn">Zur Übersicht</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Feuerwehr Bewerbungstrainer</span>
+    <span>Trainingssimulation · Stand der öffentlich verfügbaren Angaben: 2026</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
