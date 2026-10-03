@@ -1,10 +1,11 @@
 /* =====================================================
    FEUERWEHR BEWERBUNGSTRAINER
+   VERSION: 20 FRAGEN PRO ÜBUNG
 ===================================================== */
 
 
 /* =====================================================
-   BERUFSFEUERWEHREN
+   FEUERWEHREN
 ===================================================== */
 
 const FEUERWEHREN = {
@@ -20,54 +21,42 @@ const FEUERWEHREN = {
 
             {
                 id: "deutsch",
-
                 name: "Deutsch",
-
                 description:
                     "Textverständnis, Rechtschreibung und Sprache"
             },
 
             {
                 id: "mathematik",
-
                 name: "Mathematik",
-
                 description:
                     "Rechnen, Prozentrechnung und Geometrie"
             },
 
             {
                 id: "allgemeinwissen",
-
                 name: "Allgemeinwissen",
-
                 description:
                     "Staat, Geschichte, Gesellschaft und Feuerwehr"
             },
 
             {
                 id: "logik",
-
                 name: "Logik",
-
                 description:
                     "Zahlenreihen, Muster und Schlussfolgerungen"
             },
 
             {
                 id: "praxis",
-
                 name: "Praktischer Teil",
-
                 description:
                     "Handwerk, Technik und Erste Hilfe"
             },
 
             {
                 id: "sport",
-
                 name: "Sporttest",
-
                 description:
                     "Ausdauer, Kraft, Koordination und Schwimmen"
             }
@@ -88,63 +77,49 @@ const FEUERWEHREN = {
 
             {
                 id: "deutsch",
-
                 name: "Deutsch",
-
                 description:
                     "Deutschgrundlagen und Sprachverständnis"
             },
 
             {
                 id: "logik",
-
                 name: "Logik",
-
                 description:
                     "Logisches Denken und Problemlösen"
             },
 
             {
                 id: "allgemeinwissen",
-
                 name: "Allgemeinwissen",
-
                 description:
                     "Allgemeine Kenntnisse"
             },
 
             {
                 id: "mathematik",
-
                 name: "Mathematik",
-
                 description:
                     "Mathematik ohne Taschenrechner"
             },
 
             {
                 id: "physik",
-
                 name: "Physik",
-
                 description:
                     "Kräfte, Bewegung und technische Grundlagen"
             },
 
             {
                 id: "praxis",
-
                 name: "Praktischer Test",
-
                 description:
                     "Handwerk und technisches Verständnis"
             },
 
             {
                 id: "sport",
-
                 name: "Sporttest",
-
                 description:
                     "Kraft, Ausdauer, Koordination und Schwimmen"
             }
@@ -163,436 +138,624 @@ const FEUERWEHREN = {
 
 const FRAGEN = {
 
-    nuernberg: [
+    nuernberg: {
 
-        {
-            thema: "Mathematik",
+        deutsch: [
 
-            frage:
-                "Ein Fahrzeug fährt 3,3 Meter pro Sekunde. Wie weit fährt es in 60 Sekunden?",
+            ["Welche Formulierung ist sachlich?",
+             ["Das ist total genial!","Der Bericht beschreibt den Einsatz.","Das war mega cool.","Das war bestimmt das beste Fahrzeug."],1],
 
-            antworten: [
+            ["Welche Schreibweise ist richtig?",
+             ["Feuerwehr","Feuerwer","Feuerwehrh","Feuer wehr"],0],
 
-                "19,8 Meter",
+            ["Was ist eine Zusammenfassung?",
+             ["Eine persönliche Meinung","Eine kurze Wiedergabe der wichtigsten Inhalte","Eine Geschichte","Eine Werbung"],1],
 
-                "198 Meter",
+            ["Welche Formulierung ist korrekt?",
+             ["Der Einsatz wurde erfolgreich beendet.","Der Einsatz wurde erfolgreich beändet.","Der Einsatz würd erfolgreich beendet.","Der Einsatz wurde erfolgrreich beendet."],0],
 
-                "1.980 Meter",
+            ["Was bedeutet 'präzise'?",
+             ["Ungenau","Genau","Langsam","Laut"],1],
 
-                "33 Meter"
+            ["Was ist das Gegenteil von 'ruhig'?",
+             ["leise","gelassen","unruhig","vorsichtig"],2],
 
-            ],
+            ["Welches Wort ist richtig geschrieben?",
+             ["Maschiene","Maschine","Masiene","Maschinne"],1],
 
-            richtig: 1,
+            ["Was ist ein Verb?",
+             ["laufen","Feuerwehr","rot","schnell"],0],
 
-            erklaerung:
-                "3,3 × 60 = 198 Meter."
+            ["Was ist ein Nomen?",
+             ["laufen","schnell","Fahrzeug","sehr"],2],
 
-        },
+            ["Welche Aussage ist eine Tatsache?",
+             ["Feuerwehrautos sind cool.","Ein Fahrzeug hat vier Räder.","Ich finde Feuerwehr spannend.","Das ist das beste Auto."],1],
 
+            ["Was bedeutet 'konzentriert arbeiten'?",
+             ["Ablenkung suchen","Aufmerksam arbeiten","Schnell aufgeben","Nur raten"],1],
 
-        {
-            thema: "Mathematik",
+            ["Welche Schreibweise ist richtig?",
+             ["Einsatzleiter","Einsazleiter","Einsatzleita","Einsatz leit er"],0],
 
-            frage:
-                "Wie viel sind 25 % von 200?",
+            ["Was ist ein Synonym für 'beginnen'?",
+             ["enden","starten","verlieren","stoppen"],1],
 
-            antworten: [
+            ["Welche Aussage ist neutral?",
+             ["Der Bericht nennt drei Einsatzkräfte.","Das war ein unglaublich guter Einsatz.","Das Fahrzeug ist hässlich.","Der Einsatz war langweilig."],0],
 
-                "25",
+            ["Was bedeutet 'kontrollieren'?",
+             ["prüfen","vergessen","zerstören","beschleunigen"],0],
 
-                "40",
+            ["Welche Schreibweise ist richtig?",
+             ["Ausrüstung","Ausrustung","Ausrrüstung","Ausrüsttung"],0],
 
-                "50",
+            ["Was ist das Gegenteil von 'gefährlich'?",
+             ["riskant","sicher","schwer","schnell"],1],
 
-                "75"
+            ["Was beschreibt 'sorgfältig'?",
+             ["genau und aufmerksam","sehr schnell","laut","zufällig"],0],
 
-            ],
+            ["Was ist eine Frage?",
+             ["Der Einsatz beginnt.","Wann beginnt der Einsatz?","Der Einsatz beginnt!","Einsatzbeginn."],1],
 
-            richtig: 2,
+            ["Welche Aussage enthält eine Meinung?",
+             ["Der Einsatz dauerte 30 Minuten.","Das Fahrzeug hat einen Wassertank.","Ich finde die Aufgabe schwierig.","Der Test beginnt um 9 Uhr."],2]
 
-            erklaerung:
-                "25 % entsprechen einem Viertel. 200 ÷ 4 = 50."
+        ],
 
-        },
 
+        mathematik: [
 
-        {
-            thema: "Allgemeinwissen",
+            ["3,3 × 60 = ?",["19,8","198","1.980","33"],1],
 
-            frage:
-                "Wie viele Bundesländer hat Deutschland?",
+            ["25 % von 200 = ?",["25","40","50","75"],2],
 
-            antworten: [
+            ["100 + 250 = ?",["300","350","400","450"],1],
 
-                "14",
+            ["500 - 175 = ?",["225","275","325","375"],2],
 
-                "15",
+            ["12 × 8 = ?",["86","96","106","116"],1],
 
-                "16",
+            ["144 ÷ 12 = ?",["10","11","12","14"],2],
 
-                "17"
+            ["1,5 km sind wie viele Meter?",["15","150","1.500","15.000"],2],
 
-            ],
+            ["2,5 Stunden sind wie viele Minuten?",["120","150","180","200"],1],
 
-            richtig: 2,
+            ["10 % von 500 = ?",["5","25","50","100"],2],
 
-            erklaerung:
-                "Deutschland besteht aus 16 Bundesländern."
+            ["75 % von 400 = ?",["200","250","300","350"],2],
 
-        },
+            ["7 × 9 = ?",["56","63","72","81"],1],
 
+            ["200 ÷ 8 = ?",["20","25","30","35"],1],
 
-        {
-            thema: "Logik",
+            ["3/4 von 100 = ?",["25","50","75","80"],2],
 
-            frage:
-                "Welche Zahl folgt? 3 – 6 – 12 – 24 – ?",
+            ["Ein Schlauch ist 20 m lang. Drei Schläuche sind verbunden. Länge?",["40 m","50 m","60 m","80 m"],2],
 
-            antworten: [
+            ["2,4 + 3,6 = ?",["5","6","7","8"],1],
 
-                "30",
+            ["10² = ?",["20","50","100","1.000"],2],
 
-                "36",
+            ["Ein Fahrzeug fährt 60 km/h. Wie weit in 2 Stunden?",["30 km","60 km","120 km","180 km"],2],
 
-                "48",
+            ["400 - 125 = ?",["225","250","275","300"],2],
 
-                "54"
+            ["5 × 15 = ?",["50","65","75","85"],2],
 
-            ],
+            ["900 ÷ 30 = ?",["20","30","40","50"],1]
 
-            richtig: 2,
+        ],
 
-            erklaerung:
-                "Jede Zahl wird mit 2 multipliziert."
 
-        },
+        allgemeinwissen: [
 
+            ["Wie viele Bundesländer hat Deutschland?",["14","15","16","17"],2],
 
-        {
-            thema: "Deutsch",
+            ["Wie heißt die Hauptstadt Deutschlands?",["München","Berlin","Hamburg","Köln"],1],
 
-            frage:
-                "Welche Aussage ist eine sachliche Zusammenfassung?",
+            ["Welche Stadt ist Landeshauptstadt Bayerns?",["Nürnberg","München","Augsburg","Regensburg"],1],
 
-            antworten: [
+            ["Wann ist der Tag der Deutschen Einheit?",["1. Mai","3. Oktober","9. November","24. Dezember"],1],
 
-                "Der Text ist total spannend.",
+            ["Wie viele Tage hat ein Schaltjahr?",["364","365","366","367"],2],
 
-                "Der Text gibt die wichtigsten Informationen zum Thema wieder.",
+            ["Wie viele Minuten hat eine Stunde?",["30","45","60","90"],2],
 
-                "Ich finde den Text langweilig.",
+            ["Wie viele Sekunden hat eine Minute?",["30","45","60","90"],2],
 
-                "Der Autor hätte etwas anderes schreiben sollen."
+            ["Welche Farbe hat eine deutsche Rettungsdienstkennzeichnung häufig?",["Rot","Schwarz","Lila","Braun"],0],
 
-            ],
+            ["Welche Nummer ist die europäische Notrufnummer?",["110","112","116","118"],1],
 
-            richtig: 1,
+            ["Welche Nummer ist in Deutschland die Polizei-Notrufnummer?",["110","112","115","116"],0],
 
-            erklaerung:
-                "Eine Zusammenfassung gibt die wesentlichen Informationen sachlich wieder."
+            ["Was ist Bayern?",["Ein Bundesland","Ein Landkreis","Eine Stadt","Ein Staat"],0],
 
-        },
+            ["Was ist Nürnberg?",["Eine Stadt","Ein Bundesland","Ein Staat","Eine Insel"],0],
 
+            ["Welche Institution beschließt Bundesgesetze mit?",["Bundestag","Feuerwehr","Polizei","Schule"],0],
 
-        {
-            thema: "Praxis",
+            ["Was bedeutet Demokratie?",["Herrschaft des Volkes","Militärherrschaft","Alleinherrschaft","Gerichtssystem"],0],
 
-            frage:
-                "Was sollte vor der Benutzung eines Werkzeugs passieren?",
+            ["Welche Einheit gehört zur Zeit?",["Sekunde","Newton","Meter","Liter"],0],
 
-            antworten: [
+            ["Was ist eine Kommune?",["Eine Gemeinde bzw. Stadt","Ein Fahrzeug","Ein Werkzeug","Ein Gebäude"],0],
 
-                "Sofort loslegen.",
+            ["Was bedeutet Erste Hilfe?",["Sofortige Hilfe bis professionelle Hilfe übernimmt","Nur ärztliche Behandlung","Nur Transport","Nur Dokumentation"],0],
 
-                "Werkzeug auf den Boden werfen.",
+            ["Welche Organisation ist für Brandschutz zuständig?",["Feuerwehr","Post","Finanzamt","Bibliothek"],0],
 
-                "Werkzeug und Sicherheitszustand prüfen.",
+            ["Was bedeutet 112?",["Notruf","Wetterdienst","Auskunft","Taxi"],0],
 
-                "Nur nach Gefühl arbeiten."
+            ["Was ist ein Bundesland?",["Teil eines föderalen Staates","Ein Fahrzeug","Ein Beruf","Ein Gebäude"],0]
 
-            ],
+        ],
 
-            richtig: 2,
 
-            erklaerung:
-                "Vor der Benutzung muss das Werkzeug geprüft werden."
+        logik: [
 
-        },
+            ["3 – 6 – 12 – 24 – ?",["30","36","48","54"],2],
 
+            ["2 – 4 – 8 – 16 – ?",["20","24","32","40"],2],
 
-        {
-            thema: "Erste Hilfe",
+            ["5 – 10 – 15 – 20 – ?",["22","25","30","35"],1],
 
-            frage:
-                "Was gehört grundsätzlich zu den ersten Maßnahmen bei einem Notfall?",
+            ["10 – 20 – 40 – 80 – ?",["100","120","160","180"],2],
 
-            antworten: [
+            ["1 – 4 – 9 – 16 – ?",["20","24","25","30"],2],
 
-                "Eigenschutz und Lageeinschätzung",
+            ["2 – 5 – 10 – 17 – 26 – ?",["31","35","37","40"],2],
 
-                "Fotos machen",
+            ["100 – 90 – 80 – 70 – ?",["50","55","60","65"],2],
 
-                "Weggehen",
+            ["4 – 8 – 12 – 16 – ?",["18","20","22","24"],1],
 
-                "Erst nach einer Stunde helfen"
+            ["81 – 27 – 9 – 3 – ?",["0","1","2","6"],1],
 
-            ],
+            ["7 – 14 – 28 – 56 – ?",["84","98","112","120"],2],
 
-            richtig: 0,
+            ["20 – 18 – 16 – 14 – ?",["10","11","12","13"],3],
 
-            erklaerung:
-                "Eigenschutz und Lageeinschätzung sind grundlegende erste Schritte."
+            ["1 – 2 – 4 – 8 – 16 – ?",["20","24","32","36"],2],
 
-        },
+            ["6 – 12 – 18 – 24 – ?",["28","30","32","36"],1],
 
+            ["50 – 45 – 40 – 35 – ?",["25","30","35","40"],1],
 
-        {
-            thema: "Sport",
+            ["3 – 9 – 27 – ?",["54","72","81","90"],2],
 
-            frage:
-                "Welche Fähigkeit wird hauptsächlich durch einen langen Lauf geprüft?",
+            ["Alle A sind B. Max ist A. Was folgt?",["Max ist B","Max ist C","Max ist kein B","Nichts"],0],
 
-            antworten: [
+            ["Alle Einsatzkräfte tragen Helm. Max ist Einsatzkraft. Was folgt?",["Max trägt Helm","Max trägt keinen Helm","Max ist Fahrer","Nichts"],0],
 
-                "Ausdauer",
+            ["Welche Zahl ist größer?",["0,5","0,05","0,005","0,0005"],0],
 
-                "Hörvermögen",
+            ["Welche Form folgt auf Kreis, Quadrat, Kreis, Quadrat?",["Kreis","Dreieck","Linie","Stern"],0],
 
-                "Feinmotorik",
+            ["Wenn heute Montag ist, welcher Tag ist in zwei Tagen?",["Dienstag","Mittwoch","Donnerstag","Freitag"],1]
 
-                "Sehkraft"
+        ],
 
-            ],
 
-            richtig: 0,
+        praxis: [
 
-            erklaerung:
-                "Ein längerer Lauf prüft hauptsächlich die Ausdauer."
+            ["Was sollte vor der Werkzeugbenutzung passieren?",["Sofort arbeiten","Werkzeug prüfen","Werkzeug werfen","Raten"],1],
 
-        }
+            ["Was dient dem Messen einer Länge?",["Meterstab","Hammer","Schraubendreher","Zange"],0],
 
-    ],
+            ["Was schützt die Hände?",["Handschuhe","Helm","Gehörschutz","Stiefel"],0],
 
+            ["Was schützt den Kopf?",["Handschuhe","Helm","Brille","Gürtel"],1],
 
+            ["Was sollte bei beschädigtem Werkzeug passieren?",["Weiter benutzen","Aussortieren und melden","Verstecken","Werfen"],1],
 
-    muenchen: [
+            ["Was ist Eigenschutz?",["Sich selbst vor Gefahren schützen","Schnell laufen","Laut rufen","Fotos machen"],0],
 
-        {
-            thema: "Mathematik",
+            ["Was ist bei einem Notruf wichtig?",["Ort und Lage nennen","Nur den Namen nennen","Auflegen","Musik abspielen"],0],
 
-            frage:
-                "Ein Schlauch ist 20 Meter lang. Drei Schläuche werden verbunden. Wie lang ist die Gesamtstrecke?",
+            ["Welche Nummer ist der Feuerwehr-Notruf?",["110","112","115","118"],1],
 
-            antworten: [
+            ["Was ist ein Schraubenschlüssel?",["Werkzeug","Fahrzeug","Schlauch","Helm"],0],
 
-                "40 Meter",
+            ["Was macht eine Zange?",["Greifen/Halten","Messen","Schwimmen","Funken erzeugen"],0],
 
-                "50 Meter",
+            ["Was ist ein Maßband?",["Messwerkzeug","Schutzhelm","Fahrzeug","Schlauch"],0],
 
-                "60 Meter",
+            ["Warum Schutzbrille tragen?",["Augen schützen","Besser hören","Schneller laufen","Besser messen"],0],
 
-                "80 Meter"
+            ["Was ist bei unbekannter Gefahr sinnvoll?",["Abstand halten und Lage beurteilen","Hineinlaufen","Gefahr ignorieren","Allein handeln"],0],
 
-            ],
+            ["Was bedeutet Teamarbeit?",["Gemeinsam koordiniert arbeiten","Allein arbeiten","Nur einer entscheidet alles","Nicht kommunizieren"],0],
 
-            richtig: 2,
+            ["Was ist eine Leiter?",["Aufstiegsmittel","Schneidwerkzeug","Messgerät","Fahrzeug"],0],
 
-            erklaerung:
-                "20 × 3 = 60 Meter."
+            ["Was ist ein Feuerlöscher?",["Löschgerät","Messgerät","Werkzeugkasten","Fahrzeug"],0],
 
-        },
+            ["Was ist eine PSA?",["Persönliche Schutzausrüstung","Private Sportausrüstung","Polizeisystem","Prüfungssoftware"],0],
 
+            ["Was ist bei Erste Hilfe wichtig?",["Eigenschutz beachten","Gefahr ignorieren","Nichts tun","Wegsehen"],0],
 
-        {
-            thema: "Physik",
+            ["Was sollte man bei einer Aufgabe zuerst tun?",["Aufgabe verstehen","Sofort rennen","Werkzeug werfen","Raten"],0],
 
-            frage:
-                "Welche Einheit gehört zur Kraft?",
+            ["Was bedeutet sorgfältiges Arbeiten?",["Genau und aufmerksam arbeiten","Sehr schnell arbeiten","Nicht kontrollieren","Raten"],0]
 
-            antworten: [
+        ],
 
-                "Joule",
 
-                "Newton",
+        sport: [
 
-                "Watt",
+            ["Was trainiert ein langer Lauf hauptsächlich?",["Ausdauer","Hörvermögen","Schreiben","Sehen"],0],
 
-                "Pascal"
+            ["Was trainiert Schwimmen?",["Ausdauer und Technik","Nur Fingerkraft","Nur Rechnen","Nur Lesen"],0],
 
-            ],
+            ["Was sollte vor Sport passieren?",["Aufwärmen","Sofort Vollgas","Nicht trinken","Nicht vorbereiten"],0],
 
-            richtig: 1,
+            ["Was ist bei Schmerzen während Sport sinnvoll?",["Belastung stoppen und abklären","Ignorieren","Weitermachen","Schneller werden"],0],
 
-            erklaerung:
-                "Die Einheit der Kraft ist Newton."
+            ["Was ist Koordination?",["Bewegungen gezielt steuern","Nur Kraft","Nur Ausdauer","Nur Geschwindigkeit"],0],
 
-        },
+            ["Was ist Kraft?",["Fähigkeit Widerstand zu überwinden","Nur Geschwindigkeit","Nur Ausdauer","Nur Gleichgewicht"],0],
 
+            ["Was ist Ausdauer?",["Belastung über längere Zeit aufrechterhalten","Nur Sprinten","Nur Springen","Nur Heben"],0],
 
-        {
-            thema: "Physik",
+            ["Was ist ein Sprint?",["Sehr schneller Lauf über kurze Strecke","Langer Spaziergang","Schwimmen","Klettern"],0],
 
-            frage:
-                "Welche Formel beschreibt Geschwindigkeit?",
+            ["Warum ausreichend trinken?",["Flüssigkeitshaushalt unterstützen","Um schwerer zu werden","Um langsamer zu sein","Nur wegen der Schuhe"],0],
 
-            antworten: [
+            ["Was ist Regeneration?",["Erholung nach Belastung","Sprint","Aufwärmen","Prüfung"],0],
 
-                "v = s / t",
+            ["Was verbessert regelmäßiges Training?",["Leistungsfähigkeit","Nur Körpergröße","Nur Schuhgröße","Nichts"],0],
 
-                "v = t / s",
+            ["Warum Technik trainieren?",["Bewegungen sicherer und effizienter machen","Nur schneller schreiben","Nur rechnen","Nur sitzen"],0],
 
-                "v = s × t",
+            ["Was ist ein Hindernislauf?",["Laufen mit Hindernissen","Schwimmen","Radfahren","Lesen"],0],
 
-                "v = F / A"
+            ["Was sollte beim Höhentraining besonders beachtet werden?",["Sicherheit und fachgerechte Sicherung","Allein klettern","Risiken ignorieren","Keine Sicherung"],0],
 
-            ],
+            ["Was ist ein Aufwärmen?",["Vorbereitung des Körpers auf Belastung","Abkühlung","Prüfung","Pause"],0],
 
-            richtig: 0,
+            ["Was ist Beweglichkeit?",["Gelenke kontrolliert bewegen können","Nur Kraft","Nur Ausdauer","Nur Sprint"],0],
 
-            erklaerung:
-                "Geschwindigkeit ist Strecke geteilt durch Zeit."
+            ["Warum Pausen einplanen?",["Erholung ermöglichen","Leistung verhindern","Zeit verschwenden","Nie trainieren"],0],
 
-        },
+            ["Was ist eine saubere Lauftechnik?",["Kontrollierte, effiziente Bewegung","Nur Arme bewegen","Nur Kopf bewegen","Nicht atmen"],0],
 
+            ["Was ist ein realistisches Trainingsziel?",["Schrittweise Leistungssteigerung","Sofort maximale Belastung","Keine Erholung","Jeden Tag maximal"],0],
 
-        {
-            thema: "Deutsch",
+            ["Was ist beim Schwimmen wichtig?",["Sicherheit und geeignete Umgebung","Allein in unbekanntem Wasser tauchen","Gefahr ignorieren","Keine Aufsicht"],0]
 
-            frage:
-                "Welche Formulierung ist sachlich?",
+        ]
 
-            antworten: [
+    },
 
-                "Das ist total genial!",
 
-                "Der Bericht beschreibt den Einsatzablauf.",
+    muenchen: {
 
-                "Das war unglaublich cool.",
+        deutsch: [
 
-                "Das war bestimmt das beste Fahrzeug."
+            ["Welche Formulierung ist sachlich?",["Das ist total genial!","Der Bericht beschreibt den Einsatz.","Das war mega cool.","Das beste Fahrzeug überhaupt!"],1],
 
-            ],
+            ["Was ist eine Zusammenfassung?",["Meinung","Wichtigste Inhalte kurz wiedergeben","Werbung","Roman"],1],
 
-            richtig: 1,
+            ["Was ist ein Verb?",["laufen","Feuerwehr","rot","schnell"],0],
 
-            erklaerung:
-                "Eine sachliche Formulierung beschreibt ohne persönliche Wertung."
+            ["Was ist ein Nomen?",["laufen","schnell","Fahrzeug","sehr"],2],
 
-        },
+            ["Was bedeutet präzise?",["genau","laut","schnell","langsam"],0],
 
+            ["Was bedeutet kontrollieren?",["prüfen","vergessen","zerstören","laufen"],0],
 
-        {
-            thema: "Logik",
+            ["Was bedeutet sorgfältig?",["genau und aufmerksam","schnell","laut","zufällig"],0],
 
-            frage:
-                "Welche Zahl folgt? 2 – 5 – 10 – 17 – 26 – ?",
+            ["Was ist das Gegenteil von ruhig?",["leise","unruhig","vorsichtig","klein"],1],
 
-            antworten: [
+            ["Welche Schreibweise ist richtig?",["Feuerwehr","Feuerwer","Feuerwehrh","Feuer wehr"],0],
 
-                "31",
+            ["Welche Schreibweise ist richtig?",["Ausrüstung","Ausrustung","Ausrüsstung","Ausrüstungg"],0],
 
-                "35",
+            ["Was ist eine Tatsache?",["Das Fahrzeug hat vier Räder.","Das ist cool.","Das ist langweilig.","Das ist das beste Fahrzeug."],0],
 
-                "37",
+            ["Was ist eine Meinung?",["Der Test beginnt um 9 Uhr.","Ich finde den Test schwierig.","Der Raum ist 20 m² groß.","Der Einsatz dauerte 30 Minuten."],1],
 
-                "40"
+            ["Was ist ein Synonym für beginnen?",["enden","starten","verlieren","stoppen"],1],
 
-            ],
+            ["Was bedeutet aufmerksam?",["konzentriert","abwesend","laut","schnell"],0],
 
-            richtig: 2,
+            ["Welche Aussage ist neutral?",["Der Bericht nennt drei Einsatzkräfte.","Das war unglaublich!","Das war schlecht.","Das beste Team!"],0],
 
-            erklaerung:
-                "Die Abstände sind +3, +5, +7, +9, +11. Daher 37."
+            ["Was ist eine Frage?",["Wann beginnt der Test?","Der Test beginnt.","Der Test beginnt!","Testbeginn."],0],
 
-        },
+            ["Was bedeutet prüfen?",["kontrollieren","zerstören","verstecken","ignorieren"],0],
 
+            ["Was bedeutet korrekt?",["richtig","falsch","laut","schnell"],0],
 
-        {
-            thema: "Allgemeinwissen",
+            ["Was ist ein Adjektiv?",["schnell","laufen","Fahrzeug","und"],0],
 
-            frage:
-                "Welche Stadt ist die Landeshauptstadt Bayerns?",
+            ["Was ist das Gegenteil von falsch?",["richtig","schlecht","klein","langsam"],0]
 
-            antworten: [
+        ],
 
-                "Nürnberg",
 
-                "Augsburg",
+        mathematik: [
 
-                "München",
+            ["20 × 3 = ?",["40","50","60","70"],2],
 
-                "Regensburg"
+            ["1,5 km = ?",["15 m","150 m","1.500 m","15.000 m"],2],
 
-            ],
+            ["25 % von 200 = ?",["25","40","50","75"],2],
 
-            richtig: 2,
+            ["100 + 250 = ?",["300","350","400","450"],1],
 
-            erklaerung:
-                "München ist die Landeshauptstadt Bayerns."
+            ["500 - 125 = ?",["325","350","375","400"],2],
 
-        },
+            ["12 × 8 = ?",["86","96","106","116"],1],
 
+            ["144 ÷ 12 = ?",["10","11","12","14"],2],
 
-        {
-            thema: "Praxis",
+            ["10 % von 500 = ?",["5","25","50","100"],2],
 
-            frage:
-                "Warum soll ein Werkzeug vor der Benutzung geprüft werden?",
+            ["75 % von 400 = ?",["200","250","300","350"],2],
 
-            antworten: [
+            ["7 × 9 = ?",["56","63","72","81"],1],
 
-                "Nur wegen der Optik.",
+            ["200 ÷ 8 = ?",["20","25","30","35"],1],
 
-                "Um Schäden und Gefahren zu erkennen.",
+            ["3/4 von 100 = ?",["25","50","75","80"],2],
 
-                "Damit es schwerer wird.",
+            ["2,4 + 3,6 = ?",["5","6","7","8"],1],
 
-                "Damit die Aufgabe länger dauert."
+            ["10² = ?",["20","50","100","1.000"],2],
 
-            ],
+            ["60 km/h × 2 h = ?",["30 km","60 km","120 km","180 km"],2],
 
-            richtig: 1,
+            ["400 - 125 = ?",["225","250","275","300"],2],
 
-            erklaerung:
-                "Beschädigte Werkzeuge können zu Unfällen führen."
+            ["5 × 15 = ?",["50","65","75","85"],2],
 
-        },
+            ["900 ÷ 30 = ?",["20","30","40","50"],1],
 
+            ["2,5 Stunden = ?",["120 min","150 min","180 min","200 min"],1],
 
-        {
-            thema: "Mathematik",
+            ["50 % von 600 = ?",["100","200","300","400"],2]
 
-            frage:
-                "Wie viele Meter sind 1,5 Kilometer?",
+        ],
 
-            antworten: [
 
-                "15",
+        logik: [
 
-                "150",
+            ["2 – 4 – 8 – 16 – ?",["20","24","32","40"],2],
 
-                "1.500",
+            ["2 – 5 – 10 – 17 – 26 – ?",["31","35","37","40"],2],
 
-                "15.000"
+            ["5 – 10 – 15 – 20 – ?",["22","25","30","35"],1],
 
-            ],
+            ["10 – 20 – 40 – 80 – ?",["100","120","160","180"],2],
 
-            richtig: 2,
+            ["1 – 4 – 9 – 16 – ?",["20","24","25","30"],2],
 
-            erklaerung:
-                "1 Kilometer = 1.000 Meter. Daher 1,5 km = 1.500 m."
+            ["100 – 90 – 80 – 70 – ?",["50","55","60","65"],2],
 
-        }
+            ["4 – 8 – 12 – 16 – ?",["18","20","22","24"],1],
 
-    ]
+            ["81 – 27 – 9 – 3 – ?",["0","1","2","6"],1],
+
+            ["7 – 14 – 28 – 56 – ?",["84","98","112","120"],2],
+
+            ["20 – 18 – 16 – 14 – ?",["10","11","12","13"],3],
+
+            ["1 – 2 – 4 – 8 – 16 – ?",["20","24","32","36"],2],
+
+            ["6 – 12 – 18 – 24 – ?",["28","30","32","36"],1],
+
+            ["50 – 45 – 40 – 35 – ?",["25","30","35","40"],1],
+
+            ["3 – 9 – 27 – ?",["54","72","81","90"],2],
+
+            ["Alle A sind B. Max ist A. Was folgt?",["Max ist B","Max ist C","Max ist kein B","Nichts"],0],
+
+            ["Alle Feuerwehrleute tragen Schutzkleidung. Max ist Feuerwehrmann. Was folgt?",["Max trägt Schutzkleidung","Max trägt keine Schutzkleidung","Max ist Fahrer","Nichts"],0],
+
+            ["Welche Zahl ist größer?",["0,5","0,05","0,005","0,0005"],0],
+
+            ["Kreis – Quadrat – Kreis – Quadrat – ?",["Kreis","Dreieck","Stern","Linie"],0],
+
+            ["Montag + 2 Tage = ?",["Dienstag","Mittwoch","Donnerstag","Freitag"],1],
+
+            ["1 – 3 – 6 – 10 – 15 – ?",["18","20","21","25"],2]
+
+        ],
+
+
+        allgemeinwissen: [
+
+            ["Wie viele Bundesländer hat Deutschland?",["14","15","16","17"],2],
+
+            ["Hauptstadt Deutschlands?",["München","Berlin","Hamburg","Köln"],1],
+
+            ["Landeshauptstadt Bayerns?",["Nürnberg","München","Augsburg","Regensburg"],1],
+
+            ["Tag der Deutschen Einheit?",["1. Mai","3. Oktober","9. November","24. Dezember"],1],
+
+            ["Europäische Notrufnummer?",["110","112","115","118"],1],
+
+            ["Polizei-Notruf Deutschland?",["110","112","115","116"],0],
+
+            ["Wie viele Tage hat ein Schaltjahr?",["364","365","366","367"],2],
+
+            ["Wie viele Minuten hat eine Stunde?",["30","45","60","90"],2],
+
+            ["Wie viele Sekunden hat eine Minute?",["30","45","60","90"],2],
+
+            ["Was ist Bayern?",["Bundesland","Stadt","Staat","Insel"],0],
+
+            ["Was ist München?",["Stadt","Bundesland","Staat","Insel"],0],
+
+            ["Was ist Nürnberg?",["Stadt","Bundesland","Staat","Insel"],0],
+
+            ["Was bedeutet Demokratie?",["Herrschaft des Volkes","Alleinherrschaft","Militärherrschaft","Gericht"],0],
+
+            ["Was ist eine Kommune?",["Gemeinde oder Stadt","Fahrzeug","Werkzeug","Schule"],0],
+
+            ["Was bedeutet Erste Hilfe?",["Hilfe bis professionelle Hilfe übernimmt","Nur Arztbehandlung","Nur Transport","Nur Dokumentation"],0],
+
+            ["Welche Organisation übernimmt Brandbekämpfung?",["Feuerwehr","Post","Finanzamt","Bibliothek"],0],
+
+            ["Was bedeutet 112?",["Notruf","Taxi","Wetter","Auskunft"],0],
+
+            ["Welche Einheit gehört zur Zeit?",["Sekunde","Newton","Meter","Liter"],0],
+
+            ["Was ist ein Bundesland?",["Teil eines föderalen Staates","Fahrzeug","Beruf","Gebäude"],0],
+
+            ["Was ist ein Notruf?",["Meldung eines Notfalls","Werbung","Unterricht","Sport"],0]
+
+        ],
+
+
+        physik: [
+
+            ["Einheit der Kraft?",["Joule","Newton","Watt","Pascal"],1],
+
+            ["Geschwindigkeit wird berechnet mit?",["v=s/t","v=t/s","v=s×t","v=F/A"],0],
+
+            ["Was ist Reibung?",["Widerstand zwischen Oberflächen","Gewicht","Geschwindigkeit","Temperatur"],0],
+
+            ["Was ist Gewichtskraft?",["Kraft durch Gravitation","Geschwindigkeit","Druck","Wärme"],0],
+
+            ["Was ist Druck?",["Kraft pro Fläche","Masse pro Zeit","Strecke pro Zeit","Energie pro Weg"],0],
+
+            ["Einheit des Drucks?",["Newton","Pascal","Watt","Joule"],1],
+
+            ["Einheit der Energie?",["Joule","Newton","Meter","Pascal"],0],
+
+            ["Was beschreibt Dichte?",["Masse pro Volumen","Kraft pro Fläche","Weg pro Zeit","Zeit pro Strecke"],0],
+
+            ["Was ist ein Hebel?",["Mechanische Vorrichtung","Fahrzeug","Werkzeugschutz","Schlauch"],0],
+
+            ["Was kann Reibung bewirken?",["Bewegung bremsen","Masse verschwinden lassen","Zeit stoppen","Licht erzeugen"],0],
+
+            ["Was ist Beschleunigung?",["Änderung der Geschwindigkeit","Gewicht","Temperatur","Druck"],0],
+
+            ["Was passiert bei größerer Fläche bei gleicher Kraft?",["Druck wird kleiner","Druck wird größer","Kraft verschwindet","Masse steigt"],0],
+
+            ["Was ist Masse?",["Menge an Materie","Geschwindigkeit","Druck","Kraft"],0],
+
+            ["Was ist Temperatur?",["Maß für thermischen Zustand","Kraft","Masse","Geschwindigkeit"],0],
+
+            ["Was ist Energie?",["Fähigkeit Arbeit zu verrichten","Nur Geschwindigkeit","Nur Gewicht","Nur Druck"],0],
+
+            ["Was ist Leistung?",["Arbeit pro Zeit","Masse pro Volumen","Kraft pro Fläche","Weg pro Zeit"],0],
+
+            ["Was ist Geschwindigkeit?",["Strecke pro Zeit","Kraft pro Fläche","Masse pro Volumen","Arbeit pro Zeit"],0],
+
+            ["Was ist ein Stromkreis?",["Geschlossener Weg für elektrischen Strom","Wasserleitung","Luftstrom","Straße"],0],
+
+            ["Was ist Spannung?",["Elektrische Potentialdifferenz","Masse","Kraft","Temperatur"],0],
+
+            ["Welche Einheit hat elektrische Spannung?",["Volt","Newton","Joule","Pascal"],0]
+
+        ],
+
+
+        praxis: [
+
+            ["Werkzeug vor Benutzung?",["Prüfen","Werfen","Verstecken","Ignorieren"],0],
+
+            ["Schutz für Hände?",["Handschuhe","Helm","Brille","Gehörschutz"],0],
+
+            ["Schutz für Kopf?",["Helm","Handschuhe","Stiefel","Gürtel"],0],
+
+            ["Warum Werkzeug prüfen?",["Gefahren erkennen","Zeit verschwenden","Optik","Gewicht"],0],
+
+            ["Was ist Eigenschutz?",["Sich selbst schützen","Schnell laufen","Laut rufen","Fotos"],0],
+
+            ["Feuerwehr-Notruf?",["110","112","115","118"],1],
+
+            ["Was ist Teamarbeit?",["Gemeinsam koordiniert arbeiten","Allein arbeiten","Nicht sprechen","Nur einer arbeitet"],0],
+
+            ["Was ist eine Zange?",["Greifwerkzeug","Messgerät","Fahrzeug","Schlauch"],0],
+
+            ["Was ist ein Schraubenschlüssel?",["Werkzeug","Helm","Fahrzeug","Schlauch"],0],
+
+            ["Was ist eine PSA?",["Persönliche Schutzausrüstung","Sportausrüstung","Polizeisystem","Software"],0],
+
+            ["Was schützt die Augen?",["Schutzbrille","Handschuhe","Helm","Stiefel"],0],
+
+            ["Was ist ein Maßband?",["Messwerkzeug","Schutzgerät","Fahrzeug","Löschmittel"],0],
+
+            ["Was tun bei unbekannter Gefahr?",["Abstand halten und beurteilen","Hineinlaufen","Ignorieren","Allein handeln"],0],
+
+            ["Was ist eine Leiter?",["Aufstiegsmittel","Schneidwerkzeug","Messgerät","Fahrzeug"],0],
+
+            ["Was ist ein Feuerlöscher?",["Löschgerät","Messgerät","Fahrzeug","Helm"],0],
+
+            ["Was ist Erste Hilfe?",["Sofortige Hilfe bis weitere Hilfe übernimmt","Nur Arzt","Nur Transport","Nichts"],0],
+
+            ["Was ist sorgfältiges Arbeiten?",["Genau und aufmerksam","Sehr schnell","Raten","Nicht prüfen"],0],
+
+            ["Was sollte man zuerst tun?",["Aufgabe verstehen","Sofort loslegen","Raten","Werkzeug werfen"],0],
+
+            ["Was gehört zum sicheren Arbeiten?",["Geeignete Schutzmaßnahmen","Keine PSA","Gefahren ignorieren","Allein handeln"],0],
+
+            ["Was ist ein Sicherheitsabstand?",["Abstand zur Gefahr","Abstand zum Tisch","Laufstrecke","Schlauchlänge"],0]
+
+        ],
+
+
+        sport: [
+
+            ["Langer Lauf prüft hauptsächlich?",["Ausdauer","Hören","Schreiben","Sehen"],0],
+
+            ["Schwimmen trainiert?",["Ausdauer und Technik","Nur Fingerkraft","Nur Rechnen","Nur Lesen"],0],
+
+            ["Vor Sport?",["Aufwärmen","Sofort Vollgas","Nicht trinken","Nicht vorbereiten"],0],
+
+            ["Bei Schmerzen?",["Belastung stoppen und abklären","Ignorieren","Weitermachen","Schneller werden"],0],
+
+            ["Was ist Koordination?",["Bewegungen steuern","Nur Kraft","Nur Ausdauer","Nur Geschwindigkeit"],0],
+
+            ["Was ist Kraft?",["Widerstand überwinden","Nur Geschwindigkeit","Nur Ausdauer","Nur Gleichgewicht"],0],
+
+            ["Was ist Ausdauer?",["Belastung länger aufrechterhalten","Nur Sprint","Nur Springen","Nur Heben"],0],
+
+            ["Was ist ein Sprint?",["Schneller kurzer Lauf","Spaziergang","Schwimmen","Klettern"],0],
+
+            ["Warum trinken?",["Flüssigkeitshaushalt unterstützen","Schwerer werden","Langsamer werden","Schuhe"],0],
+
+            ["Was ist Regeneration?",["Erholung","Sprint","Aufwärmen","Prüfung"],0],
+
+            ["Regelmäßiges Training verbessert?",["Leistungsfähigkeit","Körpergröße","Schuhgröße","Nichts"],0],
+
+            ["Warum Technik trainieren?",["Sicherer und effizienter bewegen","Schneller schreiben","Rechnen","Sitzen"],0],
+
+            ["Was ist ein Hindernislauf?",["Laufen mit Hindernissen","Schwimmen","Radfahren","Lesen"],0],
+
+            ["Höhentraining?",["Sicherheit und Sicherung beachten","Allein klettern","Risiken ignorieren","Keine Sicherung"],0],
+
+            ["Was ist Aufwärmen?",["Vorbereitung auf Belastung","Abkühlung","Pause","Prüfung"],0],
+
+            ["Was ist Beweglichkeit?",["Kontrollierte Gelenkbewegung","Nur Kraft","Nur Ausdauer","Nur Sprint"],0],
+
+            ["Warum Pausen?",["Erholung ermöglichen","Leistung verhindern","Zeit verschwenden","Nie trainieren"],0],
+
+            ["Saubere Lauftechnik?",["Kontrollierte effiziente Bewegung","Nur Arme","Nur Kopf","Nicht atmen"],0],
+
+            ["Realistisches Trainingsziel?",["Schrittweise steigern","Sofort maximal","Keine Erholung","Jeden Tag maximal"],0],
+
+            ["Beim Schwimmen wichtig?",["Sicherheit","Unbekannt allein tauchen","Gefahr ignorieren","Keine Aufsicht"],0]
+
+        ]
+
+    }
 
 };
 
 
 
 /* =====================================================
-   PROGRAMM STATUS
+   STATUS
 ===================================================== */
 
 let ausgewählteFeuerwehr = null;
@@ -607,27 +770,25 @@ let antwortGegeben = false;
 
 let prüfung = false;
 
+let aktuellesModul = null;
+
 let timer = null;
 
 let zeit = 0;
 
-let aktuellesModul = null;
-
-
 
 /* =====================================================
-   HILFSFUNKTION
+   SEITENWECHSEL
 ===================================================== */
 
 function zeigeSeite(id) {
 
     document
         .querySelectorAll(".screen")
-        .forEach(seite => {
-
-            seite.classList.remove("active");
-
-        });
+        .forEach(
+            screen =>
+                screen.classList.remove("active")
+        );
 
 
     document
@@ -636,19 +797,15 @@ function zeigeSeite(id) {
 
 
     window.scrollTo({
-
         top: 0,
-
         behavior: "smooth"
-
     });
 
 }
 
 
-
 /* =====================================================
-   FEUERWEHREN ANZEIGEN
+   FEUERWEHREN
 ===================================================== */
 
 function zeigeFeuerwehren() {
@@ -660,69 +817,80 @@ function zeigeFeuerwehren() {
     container.innerHTML = "";
 
 
-    for (
-        const [id, feuerwehr]
-        of Object.entries(FEUERWEHREN)
-    ) {
+    Object.entries(FEUERWEHREN)
+        .forEach(
+            ([id, feuerwehr]) => {
 
-        const element =
-            document.createElement("div");
-
-
-        element.className =
-            "city-card";
+                const card =
+                    document.createElement("div");
 
 
-        element.innerHTML = `
-
-            <h3>
-                🚒 ${feuerwehr.name}
-            </h3>
-
-            <p>
-                ${feuerwehr.description}
-            </p>
-
-            <div class="tags">
-
-                ${feuerwehr.module
-                    .slice(0,5)
-                    .map(modul =>
-                        `<span class="tag">
-                            ${modul.name}
-                        </span>`
-                    )
-                    .join("")
-                }
-
-            </div>
-
-        `;
+                card.className =
+                    "city-card";
 
 
-        element.onclick = function() {
+                card.innerHTML = `
 
-            ausgewählteFeuerwehr = id;
+                    <h3>
+                        🚒 ${feuerwehr.name}
+                    </h3>
+
+                    <p>
+                        ${feuerwehr.description}
+                    </p>
+
+                    <div class="tags">
+
+                        ${feuerwehr.module
+                            .slice(0,5)
+                            .map(
+                                modul =>
+                                `<span class="tag">
+                                    ${modul.name}
+                                </span>`
+                            )
+                            .join("")
+                        }
+
+                    </div>
+
+                `;
 
 
-            document
-                .querySelectorAll(".city-card")
-                .forEach(card =>
-                    card.classList.remove("selected")
-                );
+                card.onclick =
+                    function() {
+
+                        ausgewählteFeuerwehr =
+                            id;
 
 
-            element.classList.add("selected");
+                        document
+                            .querySelectorAll(
+                                ".city-card"
+                            )
+                            .forEach(
+                                element =>
+                                element
+                                .classList
+                                .remove(
+                                    "selected"
+                                )
+                            );
 
-        };
+
+                        card.classList.add(
+                            "selected"
+                        );
+
+                    };
 
 
-        container.appendChild(element);
+                container.appendChild(card);
 
-    }
+            }
+        );
 
 }
-
 
 
 /* =====================================================
@@ -732,7 +900,9 @@ function zeigeFeuerwehren() {
 function öffneDashboard() {
 
     const feuerwehr =
-        FEUERWEHREN[ausgewählteFeuerwehr];
+        FEUERWEHREN[
+            ausgewählteFeuerwehr
+        ];
 
 
     document.getElementById(
@@ -747,66 +917,77 @@ function öffneDashboard() {
         feuerwehr.description;
 
 
-    const module =
-        document.getElementById("moduleList");
+    const container =
+        document.getElementById(
+            "moduleList"
+        );
 
 
-    module.innerHTML = "";
+    container.innerHTML = "";
 
 
-    feuerwehr.module.forEach(
-        (modul, index) => {
+    feuerwehr.module
+        .forEach(
+            (modul,index) => {
 
-            const element =
-                document.createElement("div");
-
-
-            element.className =
-                "module";
-
-
-            element.innerHTML = `
-
-                <div class="module-number">
-                    ${index + 1}
-                </div>
-
-                <div>
-
-                    <h3>
-                        ${modul.name}
-                    </h3>
-
-                    <p>
-                        ${modul.description}
-                    </p>
-
-                </div>
-
-                <small>
-                    START →
-                </small>
-
-            `;
+                const element =
+                    document.createElement(
+                        "div"
+                    );
 
 
-            element.onclick = () =>
-                öffneLernmodul(modul);
+                element.className =
+                    "module";
 
 
-            module.appendChild(element);
+                element.innerHTML = `
 
-        }
-    );
+                    <div class="module-number">
+                        ${index + 1}
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            ${modul.name}
+                        </h3>
+
+                        <p>
+                            ${modul.description}
+                        </p>
+
+                    </div>
+
+                    <small>
+                        20 FRAGEN →
+                    </small>
+
+                `;
+
+
+                element.onclick =
+                    () =>
+                    öffneLernmodul(
+                        modul
+                    );
+
+
+                container.appendChild(
+                    element
+                );
+
+            }
+        );
 
 
     ladeStatistik();
 
 
-    zeigeSeite("dashboardScreen");
+    zeigeSeite(
+        "dashboardScreen"
+    );
 
 }
-
 
 
 /* =====================================================
@@ -815,7 +996,8 @@ function öffneDashboard() {
 
 function öffneLernmodul(modul) {
 
-    aktuellesModul = modul;
+    aktuellesModul =
+        modul;
 
 
     document.getElementById(
@@ -839,54 +1021,59 @@ function öffneLernmodul(modul) {
         </h2>
 
         <p>
-            In diesem Lernmodul trainierst du
-            die Grundlagen für den Bereich
-            <strong>${modul.name}</strong>.
+            In diesem Modul trainierst du
+            den Bereich
+            <strong>
+                ${modul.name}
+            </strong>.
         </p>
 
         <h3>
-            Lernstrategie
+            Vorbereitung
         </h3>
 
         <p>
-            Lies die Informationen sorgfältig,
-            lerne die Grundlagen und teste dich
-            anschließend mit den Prüfungsfragen.
+            Lies den Lernstoff sorgfältig
+            und teste danach dein Wissen.
         </p>
 
         <div class="fact">
 
             <strong>
-                Wichtig:
+                Prüfungsmodus:
             </strong>
 
-            Im echten Auswahlverfahren können
-            Aufgaben und Anforderungen geändert
-            werden. Dieses Modul ist eine
-            Trainingssimulation.
+            Du musst insgesamt
+            <strong>20 Fragen</strong>
+            beantworten.
+
+            Erst danach bekommst du
+            dein Ergebnis.
 
         </div>
 
         <h3>
-            Prüfungstipp
+            Wichtig
         </h3>
 
         <ul>
 
             <li>
-                Aufgaben genau lesen
+                Lies jede Frage genau.
             </li>
 
             <li>
-                Nicht vorschnell antworten
+                Überlege vor der Antwort.
             </li>
 
             <li>
-                Schwierige Aufgaben markieren
+                Nach der Antwort wird die
+                Lösung erklärt.
             </li>
 
             <li>
-                Zeit im Auge behalten
+                Am Ende werden alle 20 Fragen
+                ausgewertet.
             </li>
 
         </ul>
@@ -894,65 +1081,110 @@ function öffneLernmodul(modul) {
     `;
 
 
-    zeigeSeite("learningScreen");
+    zeigeSeite(
+        "learningScreen"
+    );
 
 }
 
 
+/* =====================================================
+   FRAGEN NORMALISIEREN
+===================================================== */
+
+function frageObjekt(
+    eintrag,
+    thema
+) {
+
+    return {
+
+        thema: thema,
+
+        frage: eintrag[0],
+
+        antworten: eintrag[1],
+
+        richtig: eintrag[2],
+
+        erklaerung:
+            "Die richtige Antwort ist: " +
+            eintrag[1][eintrag[2]]
+
+    };
+
+}
+
 
 /* =====================================================
-   MODULTEST
+   20 FRAGEN FÜR MODUL
+===================================================== */
+
+function bekomme20Fragen(
+    modulId
+) {
+
+    const daten =
+        FRAGEN[
+            ausgewählteFeuerwehr
+        ][modulId];
+
+
+    if (!daten)
+        return [];
+
+
+    return daten
+        .map(
+            frage =>
+            frageObjekt(
+                frage,
+                modulId
+            )
+        )
+        .sort(
+            () =>
+                Math.random() - 0.5
+        )
+        .slice(0,20);
+
+}
+
+
+/* =====================================================
+   MODULTEST START
 ===================================================== */
 
 function starteModulTest() {
 
-    const alle =
-        FRAGEN[ausgewählteFeuerwehr];
-
-
     aktuelleFragen =
-        alle
-        .filter(frage => {
-
-            return frage.thema
-                .toLowerCase()
-                .includes(
-                    aktuellesModul.name
-                    .split(" ")[0]
-                    .toLowerCase()
-                );
-
-        });
+        bekomme20Fragen(
+            aktuellesModul.id
+        );
 
 
     if (
-        aktuelleFragen.length === 0
+        aktuelleFragen.length < 20
     ) {
 
-        aktuelleFragen =
-            [...alle]
-            .sort(() =>
-                Math.random() - .5
-            )
-            .slice(0,5);
+        alert(
+            "Für dieses Modul sind noch nicht 20 Fragen hinterlegt."
+        );
+
+        return;
 
     }
-
-
-    aktuelleFragen =
-        aktuelleFragen.slice(0,5);
 
 
     prüfung = false;
 
 
     starteQuiz(
-        aktuellesModul.name,
-        300
+        `${aktuellesModul.name} · 20-Fragen-Test`,
+        1200
     );
 
 }
-
 
 
 /* =====================================================
@@ -961,10 +1193,54 @@ function starteModulTest() {
 
 function startePrüfung() {
 
+    const alleModule =
+        FEUERWEHREN[
+            ausgewählteFeuerwehr
+        ].module;
+
+
+    let pool = [];
+
+
+    alleModule.forEach(
+        modul => {
+
+            const fragen =
+                FRAGEN[
+                    ausgewählteFeuerwehr
+                ][modul.id];
+
+
+            if (fragen) {
+
+                fragen.forEach(
+                    frage => {
+
+                        pool.push(
+                            frageObjekt(
+                                frage,
+                                modul.name
+                            )
+                        );
+
+                    }
+                );
+
+            }
+
+        }
+    );
+
+
     aktuelleFragen =
-        [...FRAGEN[ausgewählteFeuerwehr]]
-        .sort(() =>
-            Math.random() - .5
+        pool
+        .sort(
+            () =>
+                Math.random() - 0.5
+        )
+        .slice(
+            0,
+            Math.min(60,pool.length)
         );
 
 
@@ -972,19 +1248,21 @@ function startePrüfung() {
 
 
     starteQuiz(
-        "Komplette Prüfung",
-        900
+        "Prüfungssimulation",
+        3600
     );
 
 }
 
 
-
 /* =====================================================
-   QUIZ STARTEN
+   QUIZ START
 ===================================================== */
 
-function starteQuiz(titel, sekunden) {
+function starteQuiz(
+    titel,
+    sekunden
+) {
 
     aktuelleFrage = 0;
 
@@ -998,7 +1276,9 @@ function starteQuiz(titel, sekunden) {
     document.getElementById(
         "quizTitle"
     ).textContent =
-        `${FEUERWEHREN[ausgewählteFeuerwehr].name} · ${titel}`;
+        `${FEUERWEHREN[
+            ausgewählteFeuerwehr
+        ].name} · ${titel}`;
 
 
     document.getElementById(
@@ -1006,10 +1286,12 @@ function starteQuiz(titel, sekunden) {
     ).textContent =
         prüfung
             ? "PRÜFUNG"
-            : "TRAINING";
+            : "ÜBUNG";
 
 
-    zeigeSeite("quizScreen");
+    zeigeSeite(
+        "quizScreen"
+    );
 
 
     zeigeFrage();
@@ -1018,7 +1300,6 @@ function starteQuiz(titel, sekunden) {
     starteTimer();
 
 }
-
 
 
 /* =====================================================
@@ -1034,33 +1315,42 @@ function starteTimer() {
 
 
     timer =
-        setInterval(() => {
+        setInterval(
+            function() {
 
-            zeit--;
-
-
-            aktualisiereTimer();
+                zeit--;
 
 
-            if (zeit <= 0) {
+                aktualisiereTimer();
 
-                stoppeTimer();
 
-                beendeQuiz(true);
+                if (
+                    zeit <= 0
+                ) {
 
-            }
+                    stoppeTimer();
 
-        },1000);
+
+                    beendeQuiz(
+                        true
+                    );
+
+                }
+
+            },
+            1000
+        );
 
 }
-
 
 
 function stoppeTimer() {
 
     if (timer) {
 
-        clearInterval(timer);
+        clearInterval(
+            timer
+        );
 
         timer = null;
 
@@ -1069,36 +1359,44 @@ function stoppeTimer() {
 }
 
 
-
 function aktualisiereTimer() {
 
     const minuten =
         String(
-            Math.floor(zeit / 60)
-        ).padStart(2,"0");
+            Math.floor(
+                zeit / 60
+            )
+        ).padStart(
+            2,
+            "0"
+        );
 
 
     const sekunden =
         String(
             zeit % 60
-        ).padStart(2,"0");
+        ).padStart(
+            2,
+            "0"
+        );
 
 
-    const timerElement =
-        document.getElementById("timer");
+    const element =
+        document.getElementById(
+            "timer"
+        );
 
 
-    timerElement.textContent =
+    element.textContent =
         `${minuten}:${sekunden}`;
 
 
-    timerElement.classList.toggle(
+    element.classList.toggle(
         "warning",
         zeit < 60
     );
 
 }
-
 
 
 /* =====================================================
@@ -1108,7 +1406,9 @@ function aktualisiereTimer() {
 function zeigeFrage() {
 
     const frage =
-        aktuelleFragen[aktuelleFrage];
+        aktuelleFragen[
+            aktuelleFrage
+        ];
 
 
     const gesamt =
@@ -1118,7 +1418,9 @@ function zeigeFrage() {
     document.getElementById(
         "questionNumber"
     ).textContent =
-        `Aufgabe ${aktuelleFrage + 1} / ${gesamt}`;
+        `Frage ${
+            aktuelleFrage + 1
+        } von ${gesamt}`;
 
 
     document.getElementById(
@@ -1136,43 +1438,65 @@ function zeigeFrage() {
     document.getElementById(
         "progressBar"
     ).style.width =
-        `${aktuelleFrage / gesamt * 100}%`;
+        `${
+            (
+                aktuelleFrage /
+                gesamt
+            ) * 100
+        }%`;
 
 
-    const antwortContainer =
-        document.getElementById("answers");
+    const answers =
+        document.getElementById(
+            "answers"
+        );
 
 
-    antwortContainer.innerHTML = "";
+    answers.innerHTML = "";
 
 
-    frage.antworten.forEach(
-        (antwort,index) => {
+    frage.antworten
+        .forEach(
+            (
+                antwort,
+                index
+            ) => {
 
-            const button =
-                document.createElement("button");
-
-
-            button.className =
-                "answer";
-
-
-            button.textContent =
-                `${String.fromCharCode(65 + index)} · ${antwort}`;
+                const button =
+                    document.createElement(
+                        "button"
+                    );
 
 
-            button.onclick = () =>
-                beantworteFrage(index);
+                button.className =
+                    "answer";
 
 
-            antwortContainer.appendChild(button);
+                button.textContent =
+                    `${String.fromCharCode(
+                        65 + index
+                    )} · ${antwort}`;
 
-        }
-    );
+
+                button.onclick =
+                    () =>
+                    beantworteFrage(
+                        index
+                    );
+
+
+                answers.appendChild(
+                    button
+                );
+
+            }
+        );
 
 
     const feedback =
-        document.getElementById("feedback");
+        document.getElementById(
+            "feedback"
+        );
 
 
     feedback.className =
@@ -1185,46 +1509,63 @@ function zeigeFrage() {
     document.getElementById(
         "nextQuestion"
     ).textContent =
-        aktuelleFrage === gesamt - 1
+        aktuelleFrage ===
+        gesamt - 1
+
             ? "Auswertung →"
-            : "Nächste Aufgabe →";
+
+            : "Nächste Frage →";
 
 
-    antwortGegeben = false;
+    antwortGegeben =
+        false;
 
 }
-
 
 
 /* =====================================================
    ANTWORT
 ===================================================== */
 
-function beantworteFrage(index) {
+function beantworteFrage(
+    index
+) {
 
-    if (antwortGegeben)
+    if (
+        antwortGegeben
+    )
         return;
 
 
-    antwortGegeben = true;
+    antwortGegeben =
+        true;
 
 
     const frage =
-        aktuelleFragen[aktuelleFrage];
+        aktuelleFragen[
+            aktuelleFrage
+        ];
 
 
     const buttons =
-        document.querySelectorAll(".answer");
+        document.querySelectorAll(
+            ".answer"
+        );
 
 
     buttons.forEach(
-        (button,index2) => {
+        (
+            button,
+            buttonIndex
+        ) => {
 
-            button.disabled = true;
+            button.disabled =
+                true;
 
 
             if (
-                index2 === frage.richtig
+                buttonIndex ===
+                frage.richtig
             ) {
 
                 button.classList.add(
@@ -1235,8 +1576,9 @@ function beantworteFrage(index) {
 
 
             if (
-                index2 === index &&
-                index !== frage.richtig
+                buttonIndex === index &&
+                index !==
+                frage.richtig
             ) {
 
                 button.classList.add(
@@ -1250,11 +1592,15 @@ function beantworteFrage(index) {
 
 
     const richtig =
-        index === frage.richtig;
+        index ===
+        frage.richtig;
 
 
-    if (richtig)
+    if (richtig) {
+
         richtigeAntworten++;
+
+    }
 
 
     const feedback =
@@ -1277,16 +1623,19 @@ function beantworteFrage(index) {
             ${
                 richtig
                     ? "Richtig!"
-                    : "Nicht richtig."
+                    : "Falsch!"
             }
         </strong>
 
-        ${frage.erklaerung}
+        <br>
+
+        ${
+            frage.erklaerung
+        }
 
     `;
 
 }
-
 
 
 /* =====================================================
@@ -1295,7 +1644,9 @@ function beantworteFrage(index) {
 
 function nächsteFrage() {
 
-    if (!antwortGegeben) {
+    if (
+        !antwortGegeben
+    ) {
 
         alert(
             "Bitte zuerst eine Antwort auswählen."
@@ -1311,7 +1662,9 @@ function nächsteFrage() {
         aktuelleFragen.length - 1
     ) {
 
-        beendeQuiz(false);
+        beendeQuiz(
+            false
+        );
 
         return;
 
@@ -1326,12 +1679,13 @@ function nächsteFrage() {
 }
 
 
-
 /* =====================================================
-   QUIZ BEENDEN
+   QUIZ BEENDET
 ===================================================== */
 
-function beendeQuiz(zeitAbgelaufen) {
+function beendeQuiz(
+    zeitAbgelaufen
+) {
 
     stoppeTimer();
 
@@ -1342,16 +1696,33 @@ function beendeQuiz(zeitAbgelaufen) {
 
     const prozent =
         Math.round(
-            richtigeAntworten /
-            gesamt *
-            100
+            (
+                richtigeAntworten /
+                gesamt
+            ) * 100
         );
 
 
-    const bestanden =
+    /*
+       ÜBUNG:
+       60 % notwendig
+
+       PRÜFUNG:
+       70 % notwendig
+
+       Das ist die Simulationseinstellung
+       dieser Webseite und keine Aussage
+       über eine offizielle Bestehensgrenze.
+    */
+
+    const grenze =
         prüfung
-            ? prozent >= 70
-            : prozent >= 60;
+            ? 70
+            : 60;
+
+
+    const bestanden =
+        prozent >= grenze;
 
 
     document.getElementById(
@@ -1374,8 +1745,8 @@ function beendeQuiz(zeitAbgelaufen) {
         "resultDescription"
     ).textContent =
         zeitAbgelaufen
-            ? "Die Prüfungszeit ist abgelaufen."
-            : "Die Prüfung wurde ausgewertet.";
+            ? "Die Zeit ist abgelaufen."
+            : "Alle Fragen wurden ausgewertet.";
 
 
     document.getElementById(
@@ -1387,7 +1758,7 @@ function beendeQuiz(zeitAbgelaufen) {
     document.getElementById(
         "resultPoints"
     ).textContent =
-        `${richtigeAntworten} von ${gesamt} Aufgaben richtig`;
+        `${richtigeAntworten} von ${gesamt} richtig`;
 
 
     document.getElementById(
@@ -1410,7 +1781,10 @@ function beendeQuiz(zeitAbgelaufen) {
         <div class="result-detail">
 
             <strong>
-                ${gesamt - richtigeAntworten}
+                ${
+                    gesamt -
+                    richtigeAntworten
+                }
             </strong>
 
             <span>
@@ -1423,11 +1797,11 @@ function beendeQuiz(zeitAbgelaufen) {
         <div class="result-detail">
 
             <strong>
-                ${prüfung ? 70 : 60}%
+                ${grenze}%
             </strong>
 
             <span>
-                Bestehensgrenze
+                Simulationsgrenze
             </span>
 
         </div>
@@ -1435,7 +1809,9 @@ function beendeQuiz(zeitAbgelaufen) {
     `;
 
 
-    if (prüfung) {
+    if (
+        prüfung
+    ) {
 
         speicherePrüfung(
             prozent,
@@ -1452,9 +1828,8 @@ function beendeQuiz(zeitAbgelaufen) {
 }
 
 
-
 /* =====================================================
-   STATISTIK
+   PRÜFUNGEN SPEICHERN
 ===================================================== */
 
 function speicherePrüfung(
@@ -1463,13 +1838,14 @@ function speicherePrüfung(
 ) {
 
     const key =
-        `feuerwehr_tests_${ausgewählteFeuerwehr}`;
+        `tests_${ausgewählteFeuerwehr}`;
 
 
     const tests =
         JSON.parse(
-            localStorage.getItem(key)
-            || "[]"
+            localStorage.getItem(
+                key
+            ) || "[]"
         );
 
 
@@ -1477,34 +1853,46 @@ function speicherePrüfung(
 
         datum:
             new Date()
-            .toLocaleString("de-DE"),
+            .toLocaleString(
+                "de-DE"
+            ),
 
-        prozent,
+        prozent:
 
-        bestanden
+            prozent,
+
+        bestanden:
+
+            bestanden
 
     });
 
 
     localStorage.setItem(
         key,
-        JSON.stringify(tests)
+        JSON.stringify(
+            tests
+        )
     );
 
 }
 
 
+/* =====================================================
+   STATISTIK
+===================================================== */
 
 function ladeStatistik() {
 
     const key =
-        `feuerwehr_tests_${ausgewählteFeuerwehr}`;
+        `tests_${ausgewählteFeuerwehr}`;
 
 
     const tests =
         JSON.parse(
-            localStorage.getItem(key)
-            || "[]"
+            localStorage.getItem(
+                key
+            ) || "[]"
         );
 
 
@@ -1514,16 +1902,27 @@ function ladeStatistik() {
         tests.length;
 
 
-    if (tests.length === 0) {
+    if (
+        tests.length === 0
+    ) {
 
         document.getElementById(
             "statBest"
-        ).textContent = "–";
+        ).textContent =
+            "–";
 
 
         document.getElementById(
             "statLast"
-        ).textContent = "–";
+        ).textContent =
+            "–";
+
+
+        document.getElementById(
+            "statProgress"
+        ).textContent =
+            "0%";
+
 
         return;
 
@@ -1533,13 +1932,16 @@ function ladeStatistik() {
     const beste =
         Math.max(
             ...tests.map(
-                test => test.prozent
+                test =>
+                    test.prozent
             )
         );
 
 
     const letzte =
-        tests[tests.length - 1];
+        tests[
+            tests.length - 1
+        ];
 
 
     document.getElementById(
@@ -1555,8 +1957,16 @@ function ladeStatistik() {
             ? "BESTANDEN"
             : "NICHT BESTANDEN";
 
-}
 
+    document.getElementById(
+        "statProgress"
+    ).textContent =
+        `${Math.min(
+            100,
+            tests.length * 10
+        )}%`;
+
+}
 
 
 /* =====================================================
@@ -1564,10 +1974,15 @@ function ladeStatistik() {
 ===================================================== */
 
 document
-    .getElementById("startButton")
-    .onclick = function() {
+    .getElementById(
+        "startButton"
+    )
+    .onclick =
+    function() {
 
-        if (!ausgewählteFeuerwehr) {
+        if (
+            !ausgewählteFeuerwehr
+        ) {
 
             alert(
                 "Bitte zuerst eine Berufsfeuerwehr auswählen."
@@ -1595,10 +2010,12 @@ document
     };
 
 
-
 document
-    .getElementById("changeCityButton")
-    .onclick = function() {
+    .getElementById(
+        "changeCityButton"
+    )
+    .onclick =
+    function() {
 
         zeigeSeite(
             "startScreen"
@@ -1607,47 +2024,62 @@ document
     };
 
 
-
 document
-    .getElementById("examButton")
+    .getElementById(
+        "examButton"
+    )
     .onclick =
     startePrüfung;
 
 
-
 document
-    .getElementById("lessonTestButton")
+    .getElementById(
+        "lessonTestButton"
+    )
     .onclick =
     starteModulTest;
 
 
-
 document
-    .getElementById("nextQuestion")
+    .getElementById(
+        "nextQuestion"
+    )
     .onclick =
     nächsteFrage;
 
 
-
 document
-    .getElementById("cancelQuiz")
+    .getElementById(
+        "cancelQuiz"
+    )
     .onclick =
     function() {
 
-        stoppeTimer();
+        if (
+            confirm(
+                "Möchtest du den Test wirklich abbrechen?"
+            )
+        ) {
 
-        öffneDashboard();
+            stoppeTimer();
+
+            öffneDashboard();
+
+        }
 
     };
 
 
-
 document
-    .getElementById("retryButton")
+    .getElementById(
+        "retryButton"
+    )
     .onclick =
     function() {
 
-        if (prüfung) {
+        if (
+            prüfung
+        ) {
 
             startePrüfung();
 
@@ -1660,9 +2092,10 @@ document
     };
 
 
-
 document
-    .getElementById("resultDashboard")
+    .getElementById(
+        "resultDashboard"
+    )
     .onclick =
     function() {
 
@@ -1671,9 +2104,10 @@ document
     };
 
 
-
 document
-    .getElementById("backButton")
+    .getElementById(
+        "backButton"
+    )
     .onclick =
     function() {
 
@@ -1682,15 +2116,16 @@ document
     };
 
 
-
 document
-    .getElementById("resetButton")
+    .getElementById(
+        "resetButton"
+    )
     .onclick =
     function() {
 
         if (
             confirm(
-                "Gesamten gespeicherten Fortschritt löschen?"
+                "Wirklich alle gespeicherten Ergebnisse löschen?"
             )
         ) {
 
@@ -1701,7 +2136,6 @@ document
         }
 
     };
-
 
 
 /* =====================================================
