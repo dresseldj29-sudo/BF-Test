@@ -23,11 +23,15 @@
     </div>
 
     <div class="top-right">
-        <span class="status">TRAINING</span>
+
+        <span class="status">
+            TRAINING
+        </span>
 
         <button id="resetButton">
             Fortschritt zurücksetzen
         </button>
+
     </div>
 
 </header>
@@ -36,9 +40,9 @@
 <main>
 
 
-<!-- =========================
-     STARTSEITE
-========================= -->
+<!-- ==================================================
+     START
+================================================== -->
 
 <section id="startScreen" class="screen active">
 
@@ -66,7 +70,7 @@
         <div class="hero-card">
 
             <div class="hero-icon">
-                🧯
+                🚒
             </div>
 
             <h3>
@@ -74,8 +78,9 @@
             </h3>
 
             <p>
-                Lernmodule, Übungsfragen, Zeitdruck,
-                Prüfungssimulation und automatische Auswertung.
+                Lernmodule, 20 Übungsfragen,
+                Prüfungssimulation, Zeitdruck und
+                automatische Auswertung.
             </p>
 
         </div>
@@ -94,14 +99,15 @@
     <div class="profile-box">
 
         <div>
+
             <h3>
                 Dein Lernprofil
             </h3>
 
             <p>
-                Dein Name ist optional und wird nur
-                auf deinem Gerät gespeichert.
+                Dein Name ist optional.
             </p>
+
         </div>
 
 
@@ -125,9 +131,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      DASHBOARD
-========================= -->
+================================================== -->
 
 <section id="dashboardScreen" class="screen">
 
@@ -158,27 +164,57 @@
     </div>
 
 
-
     <div class="statistics">
 
         <div class="stat">
-            <strong id="statTests">0</strong>
-            <span>Prüfungen</span>
+
+            <strong id="statTests">
+                0
+            </strong>
+
+            <span>
+                Prüfungen
+            </span>
+
         </div>
 
-        <div class="stat">
-            <strong id="statBest">–</strong>
-            <span>Beste Punktzahl</span>
-        </div>
 
         <div class="stat">
-            <strong id="statProgress">0%</strong>
-            <span>Lernfortschritt</span>
+
+            <strong id="statBest">
+                –
+            </strong>
+
+            <span>
+                Beste Punktzahl
+            </span>
+
         </div>
 
+
         <div class="stat">
-            <strong id="statLast">–</strong>
-            <span>Letztes Ergebnis</span>
+
+            <strong id="statProgress">
+                0%
+            </strong>
+
+            <span>
+                Lernfortschritt
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong id="statLast">
+                –
+            </strong>
+
+            <span>
+                Letztes Ergebnis
+            </span>
+
         </div>
 
     </div>
@@ -193,11 +229,11 @@
             <div class="panel-header">
 
                 <h2>
-                    Lernmodule
+                    Übungsmodule
                 </h2>
 
                 <span>
-                    Schritt für Schritt
+                    Immer 20 Fragen
                 </span>
 
             </div>
@@ -219,25 +255,32 @@
             </span>
 
             <h2>
-                Prüfung unter Zeitdruck
+                Einstellungstest simulieren
             </h2>
 
             <p>
-                Eine komplette Simulation mit
-                gemischten Aufgaben und automatischer
-                Auswertung.
+                Starte eine komplette Prüfung
+                unter Zeitdruck.
             </p>
 
 
             <ul>
 
-                <li>⏱ Zeitlimit</li>
+                <li>
+                    ⏱ Zeitlimit
+                </li>
 
-                <li>📝 Verschiedene Themen</li>
+                <li>
+                    📝 Gemischte Themen
+                </li>
 
-                <li>🎯 Punktewertung</li>
+                <li>
+                    🎯 Punktewertung
+                </li>
 
-                <li>🏆 Bestanden / nicht bestanden</li>
+                <li>
+                    🏆 Bestehen / nicht bestehen
+                </li>
 
             </ul>
 
@@ -246,7 +289,7 @@
                 id="examButton"
                 class="primary wide"
             >
-                Komplette Prüfung starten
+                Prüfung simulieren
             </button>
 
         </div>
@@ -260,10 +303,10 @@
             Hinweis:
         </strong>
 
-        Diese Webseite verwendet selbst erstellte
+        Die Fragen sind selbst erstellte
         Trainingsaufgaben auf Grundlage öffentlich
-        beschriebener Auswahlverfahren. Es handelt sich
-        nicht um vertrauliche oder geleakte Originalprüfungen.
+        beschriebener Auswahlverfahren und keine
+        vertraulichen Originalprüfungen.
 
     </div>
 
@@ -271,9 +314,9 @@
 
 
 
-<!-- =========================
-     LERNBEREICH
-========================= -->
+<!-- ==================================================
+     LERNMODUL
+================================================== -->
 
 <section id="learningScreen" class="screen">
 
@@ -282,7 +325,7 @@
         <div>
 
             <span class="eyebrow">
-                LERNMODUL
+                ÜBUNGSMODUL
             </span>
 
             <h1 id="learningTitle"></h1>
@@ -316,11 +359,26 @@
             <div id="lessonText"></div>
 
 
+            <div class="question-counter-box">
+
+                <strong>
+                    20 Fragen
+                </strong>
+
+                <span>
+                    Dieses Übungsmodul wird erst
+                    nach 20 beantworteten Fragen
+                    ausgewertet.
+                </span>
+
+            </div>
+
+
             <button
                 id="lessonTestButton"
                 class="primary"
             >
-                Modul testen →
+                20-Fragen-Test starten →
             </button>
 
         </article>
@@ -331,9 +389,9 @@
 
 
 
-<!-- =========================
-     PRÜFUNG
-========================= -->
+<!-- ==================================================
+     QUIZ
+================================================== -->
 
 <section id="quizScreen" class="screen">
 
@@ -425,9 +483,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ERGEBNIS
-========================= -->
+================================================== -->
 
 <section id="resultScreen" class="screen">
 
@@ -491,6 +549,7 @@
     </div>
 
 </section>
+
 
 </main>
 
